@@ -22,7 +22,7 @@ We will support:
 - RaspPi 4.0
 - Arduino MKR WiFi 1010
 - Arduino NodeMCU ESP8266 ESP-12FWiFi
-- 
+
 #### Sensors and Actors
 - [RGB LED Modul] (https://amzn.eu/d/d6ITTgt)
 - [Temperature, Humidity, Air-Pressure] DHT11, DHT22
