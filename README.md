@@ -17,7 +17,8 @@ Orcale Apex is a framework to design and hosting a database, create web-based-Ap
 Here you will find some tutorials to programming Microcontroller to read sensors, control actors and connect to an infrastructure like RESTful webService
 - [Getting Started with RaspPi] (https://www.raspberrypi.com/documentation/computers/getting-started.html)
 - [Getting Started with Arduino] (https://www.arduino.cc)
-we will support:
+
+We will support:
 - RaspPi 4.0
 - Arduino MKR WiFi 1010
 - Arduino NodeMCU ESP8266 ESP-12FWiFi
