@@ -24,7 +24,7 @@ Modules
 Interfaces  
 *\<Short Description of interfaces>*
 
-### \Module1
+## Module 1
 
 *\<Targets/Requirements>*
 
