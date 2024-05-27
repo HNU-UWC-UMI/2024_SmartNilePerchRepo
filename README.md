@@ -16,9 +16,20 @@ Orcale Apex is a framework to design and hosting a database, create web-based-Ap
 Here you will find some tutorials to programming Microcontroller to read sensors, control actors and connect to an infrastructure like RESTful webService
 - [Getting Started with RaspPi] (https://www.raspberrypi.com/documentation/computers/getting-started.html)
 - [Getting Started with Arduino] (https://www.arduino.cc)
-#### Sensors
+
+we will support:
+- RaspPi 4.0
+- Arduino MKR WiFi 1010
+- Arduino NodeMCU ESP8266 ESP-12FWiFi
+#### Sensors and Actors
+- [RGB LED Modul] (https://amzn.eu/d/d6ITTgt)
+- [Temperature, Humidity, Air-Pressure] DHT11, DHT22
+- [Distance] ultraSonic, infraRed
+- [Volatile Organic Compound Sensor] SEN-CCS811
+- [Servo Motor]
   
-### Machine Learning
+### Machine Learning with Jetson Nano
+- [Getting Started with Jetson Nano]
 
 ## Tasks
 
