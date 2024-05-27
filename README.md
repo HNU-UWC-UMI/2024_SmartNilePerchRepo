@@ -9,22 +9,22 @@
 | *\<Rolle-1>* | *\<Kontakt-1>* | *\<Erwartung-1>*  |
 | *\<Rolle-2>* | *\<Kontakt-2>* | *\<Erwartung-2>*  |
 
-## Team
+## Team / Sub-Projects
 
-| Name         | Rolle(n)       |
-|--------------|----------------|
-| *\<Name-1>*  | *\<Rolle(n)>*  |
-| *\<Name-2>*  | *\<Rolle(n)>*  |
+| Name         | Rolle(n)       | Sub-Project/Modul |
+|--------------|----------------|-------------------|
+| *\<Name-1>*  | *\<Rolle(n)>*  |                   |
+| *\<Name-2>*  | *\<Rolle(n)>*  |                   |
 
-# S<Erläuternder Text>*
+# Systemarchitecture
 
-Enthaltene Bausteine  
-*\<Beschreibung der enthaltenen Bausteine (Blackboxen)>*
+Modules  
+*\<Short Description e.g. Module1>*
 
-Wichtige Schnittstellen  
-*\<Beschreibung wichtiger Schnittstellen>*
+Interfaces  
+*\<Short Description of interfaces>*
 
-### \Sub-Project1
+### \Module1
 
 *\<Targets/Requirements>*
 
