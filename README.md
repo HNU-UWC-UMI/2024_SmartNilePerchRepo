@@ -9,7 +9,10 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 ### Backend
-#### Getting Started with Oracle Apex
+#### Oracle Apex
+Orcale Apex is a framework to design and hosting a database, create web-based-Apps on that database configering UI-Forms and enable easy to use RESTful interfaces to your database.
+- [Getting Started with Oracle Apex] (https://apex.oracle.com/en/learn/build-your-first-app/)
+- [UWC and HNU video casts] (will you find in our moodle)
 
 ### IoT
 ### Machine Learning
