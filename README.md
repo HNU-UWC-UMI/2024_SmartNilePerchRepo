@@ -24,31 +24,14 @@ Enthaltene Bausteine
 Wichtige Schnittstellen  
 *\<Beschreibung wichtiger Schnittstellen>*
 
-### \<Name Blackbox 1>
+### \Sub-Project1
 
-*\<Zweck/Verantwortung>*
+*\<Targets/Requirements>*
 
-*\<Schnittstelle(n)>*
+*\<Interfaces>*
 
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
+*\<Concepts>*
 
-*\<(Optional) Ablageort/Datei(en)>*
+*\<Artifacts>*
 
-*\<(Optional) Erfüllte Anforderungen>*
-
-*\<(optional) Offene Punkte/Probleme/Risiken>*
-
-### \<Name Blackbox 2>
-
-*\<Blackbox-Template>*
-
-### \<Name Blackbox n>
-
-*\<Blackbox-Template>*
-
-### \<Name Schnittstelle 1>
-
-…
-
-### \<Name Schnittstelle m>
-
+*\<Problems/Risks>*
