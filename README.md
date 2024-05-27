@@ -1,5 +1,12 @@
 # Introduction and Targets
 
+## Short Introduction into Technologies
+### Mobile
+
+### Backend
+### IoT
+### Machine Learning
+
 ## Tasks
 
 ## Stakeholder
