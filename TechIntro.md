@@ -32,8 +32,9 @@ We will support:
 - [Moisture Sensor](https://learn.littlebirdelectronics.com.au/guides/use-a-moisture-sensor-with-arduino)
 - [Distance Sensors: ultraSonic, infraRed](https://learn.littlebirdelectronics.com.au/guides/ultrasonic-rangefinder-with-arduino)
 - [Volatile Organic Compound Sensor] SEN-CCS811
-- [Servo Motor](https://learn.littlebirdelectronics.com.au/guides/control-a-servo-with-arduino)
-- [Relais and Water Pump](https://learn.littlebirdelectronics.com.au/guides/automatic-plant-watering-with-arduino)
+- [Servo Motor-Arduino Example](https://learn.littlebirdelectronics.com.au/guides/control-a-servo-with-arduino)
+- [Relais and Water Pump-Arduino Example](https://learn.littlebirdelectronics.com.au/guides/automatic-plant-watering-with-arduino)
+- [GPS Modul-Arduino Example](https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/)
   
 ## Machine Learning and Jetson Nano
 - [Google Colab as AI-Platform](https://colab.research.google.com/)
