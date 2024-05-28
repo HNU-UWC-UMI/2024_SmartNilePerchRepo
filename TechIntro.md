@@ -1,6 +1,6 @@
 # Short Introduction into Technologies
 
- ![BigPicture](URL)
+ ![BigPicture](./images/IoTBigPicture.png)
 
 ## Frontend Mobile: Getting Started with Flutter
 A few resources to get you started if this is your first Flutter project:
