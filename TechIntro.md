@@ -27,6 +27,7 @@ We will support:
 - Arduino NodeMCU ESP8266 ESP-12FWiFi
 
 ### Sensors and Actors
+- [collection of Arduino-Projects](https://randomnerdtutorials.com/)
 - [RGB LED Modul](https://amzn.eu/d/d6ITTgt)
 - [Temperature, Humidity, Air-Pressure] DHT11, DHT22
 - [Moisture Sensor](https://learn.littlebirdelectronics.com.au/guides/use-a-moisture-sensor-with-arduino)
