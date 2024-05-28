@@ -13,9 +13,9 @@ Orcale Apex is a framework to design and hosting a database, create web-based-Ap
 - [UWC and HNU video casts] (will you find in our moodle)
 ## Backend with InfluxDB and Grafana
 ## Introduction into IoT using RaspPi and Arduino
-Here you will find some tutorials to programming Microcontroller to read sensors, control actors and connect to an infrastructure like RESTful webService
-- [Getting Started with RaspPi] (https://www.raspberrypi.com/documentation/computers/getting-started.html)
-- [Getting Started with Arduino] (https://www.arduino.cc)
+Here you will find some tutorials to programming Microcontroller to read sensors, control actors and connect to an infrastructure like RESTful webService:
+- [RaspPi: Getting Started with RaspPi] (https://www.raspberrypi.com/documentation/computers/getting-started.html)
+- [Arduino: Getting Started with Arduino] (https://www.arduino.cc)
 
 We will support:
 - RaspPi 4.0
