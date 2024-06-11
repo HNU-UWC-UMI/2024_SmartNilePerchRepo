@@ -43,13 +43,13 @@ def save_data_as_json(filepath: str, lat, long):
 
 		with open(filepath, 'r+') as file:
 			json.dump(geo_log, file, sort_keys=True)
-			print(f"{filepath} Updated json with dumped data")
+			print(f"Updated '{filepath}' with dumped data")
 
 	else:
 		with open(filepath, 'w') as file:
 			geo_log = [result_dict]
 			json.dump(geo_log, file, sort_keys=True)
-			print(f"{filepath} Created json with dumped data")
+			print(f"Created '{filepath}' with dumped data")
 
 	return None
 
