@@ -21,17 +21,19 @@ def create_dirs(parent_dir):
 	return None
 
 
-def save_data_as_json(filepath):
+def save_data_as_json(filepath: str, lat, long):
 	result_dict = dict()
-	# lat, long = parse_gps()
-	lat = random.uniform(-90.00, 90.00)
-	long = random.uniform(-180.00, 180.00)
+
+	# lat = random.uniform(-90.00, 90.00)
+	# long = random.uniform(-180.00, 180.00)
 
 	ts_value = datetime.datetime.now().isoformat()
 
 	result_dict["ts_value"] = ts_value
 	result_dict["lat"] = lat
 	result_dict["long"] = long
+
+	print(f"Datetime: {ts_value}, Latitude: {lat}, Longitude: {long}")
 
 	if os.path.isfile(filepath):
 
@@ -50,9 +52,5 @@ def save_data_as_json(filepath):
 			print(f"{filepath} Created json with dumped data")
 
 	return None
-
-
-json_filepath = setup_structure()
-save_data_as_json(json_filepath)
 
 

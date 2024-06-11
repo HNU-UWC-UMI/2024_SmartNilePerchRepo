@@ -1,5 +1,6 @@
 import serial
 import pynmea2
+from geo_data import save_data_as_json, setup_structure
 
 
 def parse_gps(io_port):
@@ -11,6 +12,9 @@ def parse_gps(io_port):
 
 
 serialPort = serial.Serial("/dev/ttyAMA0", 9600, timeout=0.5)
+json_filepath = setup_structure()
 while True:
 	serial_port = serialPort.readline()
-	parse_gps(serial_port)
+	lat, long = parse_gps(serial_port)
+	save_data_as_json(json_filepath, lat, long)
+
