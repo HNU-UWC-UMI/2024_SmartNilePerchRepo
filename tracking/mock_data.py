@@ -2,7 +2,6 @@ import os
 import datetime
 import json
 import time
-
 import requests
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
@@ -43,18 +42,17 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 				save_data_as_json(filepath, lat, long, route_datetime, tracked_object)
 				coordinates.append((lat, long))
 				route_datetime += datetime.timedelta(minutes=60)
-				# counter += 1
 
 			except:
 				continue
 
 	elif tracked_object == "boat":
 		route_datetime += datetime.timedelta(hours=2)
-		save_data_as_json(filepath=filepath, lat=route_source[1], long=route_source[0], date_and_time=route_datetime, tracked_object=tracked_object)
+		save_data_as_json(filepath=filepath, lat=route_source[1], long=route_source[0], datetime_value=route_datetime, tracked_object=tracked_object)
 
 	else:  # plane
 		route_datetime += datetime.timedelta(hours=3)
-		save_data_as_json(filepath=filepath, lat=route_dest[1], long=route_dest[0], date_and_time=route_datetime, tracked_object=tracked_object)
+		save_data_as_json(filepath=filepath, lat=route_dest[1], long=route_dest[0], datetime_value=route_datetime, tracked_object=tracked_object)
 
 	return route_datetime
 
@@ -78,10 +76,10 @@ def create_dirs(parent_dir):
 	return None
 
 
-def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
+def save_data_as_json(filepath: str, lat, long, datetime_value, tracked_object):
 	result_dict = dict()
 
-	timestamp = date_and_time.isoformat()
+	timestamp = datetime_value.isoformat()
 
 	result_dict["timestamp"] = timestamp
 	result_dict["lat"] = lat
@@ -150,4 +148,5 @@ for key, value in route_dict.items():
 	target_object = value["target_object"]
 
 	date_and_time = get_route_between_locations(json_filepath, source, dest, target_object, date_and_time)
+	print("Finished process successfully")
 
