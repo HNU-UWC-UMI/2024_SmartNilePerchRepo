@@ -1,15 +1,11 @@
 import os
 import datetime
 import json
-import random
-# from faker import Faker
+import time
 
 import requests
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
-
-# Plotting
-# import plotly.express as px
 
 
 def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
@@ -23,23 +19,18 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 		headers = {'Content-type': 'application/json'}
 		r = requests.get(url, headers=headers)
 		print("Calling API ...:", r.status_code)  # Status Code 200 is success
+		time.sleep(0.5)
 
 		routejson = r.json()
 		route_nodes = routejson['routes'][0]['legs'][0]['annotation']['nodes']
 
-		# keeping every nth-element in the node list to optimize time
 		route_list = []
 		for i in range(0, len(route_nodes)):
-			# get every 300. point of 0.1 miles distance = 30 miles distance
+			# keep every nth-point of 0.1 miles distance = n miles distance
 			if i % 60 == 1:
 				route_list.append(route_nodes[i])
 
 		coordinates = []
-
-		# length_of_data = len(route_list)
-		# first_border = int(length_of_data / 3)
-		# second_border = first_border * 2
-		# counter = 1
 
 		for node in tqdm(route_list):
 			try:
@@ -49,13 +40,6 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 				for child in myroot:
 					lat, long = child.attrib['lat'], child.attrib['lon']
 
-				# if counter < first_border:
-				# tracked_object = "boat"
-				# if first_border <= counter <= second_border:
-				# 	tracked_object = "truck"
-				# elif counter > second_border:
-				# 	tracked_object = "plane_container"
-
 				save_data_as_json(filepath, lat, long, route_datetime, tracked_object)
 				coordinates.append((lat, long))
 				route_datetime += datetime.timedelta(minutes=60)
@@ -63,7 +47,6 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 
 			except:
 				continue
-		# print(coordinates[:10])
 
 	elif tracked_object == "boat":
 		route_datetime += datetime.timedelta(hours=2)
@@ -76,9 +59,11 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 	return route_datetime
 
 
-def setup_structure(filename: str = "tracking_data.json"):
-	dir_filepath = "data/tracking/"
-	create_dirs(dir_filepath)
+def setup_structure(filename: str = "tracking_data.json", init: bool = False):
+	dir_filepath = "data/"
+
+	if init:
+		create_dirs(dir_filepath)
 
 	filepath = dir_filepath + filename
 
@@ -95,9 +80,6 @@ def create_dirs(parent_dir):
 
 def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 	result_dict = dict()
-
-	# lat = random.uniform(-90.00, 90.00)
-	# long = random.uniform(-180.00, 180.00)
 
 	timestamp = date_and_time.isoformat()
 
@@ -127,55 +109,40 @@ def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 	return None
 
 
-# Lat, Long
-# -0.56328107, 33.04421661
-# Long, Lat
-# source = (33.04421661, -0.56328107)  # Victoria Lake
-# # Lat, Long
-# # 50.88360814831935, 4.3575478300498744
-# # Long, Lat
-# dest = (4.35754783, 50.88360814)  # Brussels
-
+# (Long, Lat)
 route_dict = {
 	"route_1": {
-		"source": (33.04421661, -0.56328107),
-		"dest": (32.80135216, 0.15211125),
+		"source": (33.04421661, -0.56328107),  # - victoria lake
+		"dest": (32.80135216, 0.15211125),  # - victoria lake coast
 		"target_object": "boat"
 	},
 	"route_2": {
-		"source": (32.80135216, 0.15211125),
-		"dest": (32.56389848, 0.32974216),
+		"source": (32.80135216, 0.15211125),  # - victoria lake coast
+		"dest": (32.56389848, 0.32974216),  # - kampala factory
 		"target_object": "truck"
 	},
 	"route_3": {
-		"source": (32.56389848, 0.32974216),
-		"dest": (32.44064755, 0.06019266),
+		"source": (32.56389848, 0.32974216),   # - kampala factory
+		"dest": (32.44064755, 0.06019266),  # - kampala airport
 		"target_object": "truck"
 	},
 	"route_4": {
-		"source": (32.44064755, 0.06019266),
-		"dest": (55.36431779410911, 25.256819319427102),
-		"target_object": "plane_container"
+		"source": (32.44064755, 0.06019266),  # - kampala airport
+		"dest": (55.36431779410911, 25.256819319427102),  # - dubai airport
+		"target_object": "plane"
 	},
 	"route_5": {
-		"source": (55.36431779410911, 25.256819319427102),
-		"dest": (4.483329753377929, 50.898982303185264),
-		"target_object": "plane_container"
+		"source": (55.36431779410911, 25.256819319427102),  # - dubai airport
+		"dest": (4.483329753377929, 50.898982303185264),  # - brussels airport
+		"target_object": "plane"
 	}
 }
 
-# destinations = {
-# 	"victoria_lake": (33.04421661, -0.56328107),
-# 	"kampala_factory": (32.56389848, 0.32974216),
-# 	"kampala_airport": (32.44064755, 0.06019266),
-# 	"dubai_airport": (25.256819319427102, 55.36431779410911),
-# 	"brussels_airport": (4.483329753377929, 50.898982303185264)
-# }
-
-
-json_filepath = setup_structure("mocked_tracking_data_4.json")
 date_and_time = datetime.datetime.now()
+datetime_for_name = date_and_time.strftime("%Y%m%d_%H%M%S")
 date_and_time.replace(minute=0, second=0, microsecond=0)
+
+json_filepath = setup_structure(f"{datetime_for_name}_tracking_data.json")
 
 for key, value in route_dict.items():
 	source = value["source"]
