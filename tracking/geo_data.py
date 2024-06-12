@@ -2,6 +2,73 @@ import os
 import datetime
 import json
 import random
+# from faker import Faker
+
+import requests
+import xml.etree.ElementTree as ET
+from tqdm import tqdm
+
+# Plotting
+# import plotly.express as px
+
+
+def get_route_between_locations(filepath, source: tuple, dest: tuple):
+	start = "{},{}".format(source[0], source[1])
+	end = "{},{}".format(dest[0], dest[1])
+	# Service - 'route', mode of transportation - 'driving', without alternatives
+	url = 'http://router.project-osrm.org/route/v1/driving/{};{}?alternatives=false&annotations=nodes'.format(start, end)
+
+	headers = {'Content-type': 'application/json'}
+	r = requests.get(url, headers=headers)
+	print("Calling API ...:", r.status_code)  # Status Code 200 is success
+
+	routejson = r.json()
+	route_nodes = routejson['routes'][0]['legs'][0]['annotation']['nodes']
+
+	#step
+
+	### keeping every third element in the node list to optimise time
+	route_list = []
+	for i in range(0, len(route_nodes)):
+		# get every 300. point of 0.1 miles distance = 30 miles distance
+		if i % 300 == 1:
+			route_list.append(route_nodes[i])
+
+	coordinates = []
+
+	date_and_time = datetime.datetime.now()
+	date_and_time.replace(minute=0, second=0, microsecond=0)
+
+	length_of_data = len(route_list)
+	first_border = int(length_of_data / 3)
+	second_border = first_border * 2
+	counter = 1
+
+	for node in tqdm(route_list):
+		try:
+			url = 'https://api.openstreetmap.org/api/0.6/node/' + str(node)
+			r = requests.get(url, headers=headers)
+			myroot = ET.fromstring(r.text)
+			for child in myroot:
+				lat, long = child.attrib['lat'], child.attrib['lon']
+
+			# if counter < first_border:
+			tracked_object = "boat"
+			if first_border <= counter <= second_border:
+				tracked_object = "truck"
+			elif counter > second_border:
+				tracked_object = "plane_container"
+
+			save_data_as_json(filepath, lat, long, date_and_time, tracked_object)
+			coordinates.append((lat, long))
+			date_and_time += datetime.timedelta(minutes=30)
+			counter += 1
+
+		except:
+			continue
+	print(coordinates[:10])
+	# step
+	return coordinates
 
 
 def setup_structure(filename: str = "tracking_data.json"):
@@ -21,19 +88,20 @@ def create_dirs(parent_dir):
 	return None
 
 
-def save_data_as_json(filepath: str, lat, long):
+def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 	result_dict = dict()
 
 	# lat = random.uniform(-90.00, 90.00)
 	# long = random.uniform(-180.00, 180.00)
 
-	ts_value = datetime.datetime.now().isoformat()
+	timestamp = date_and_time.isoformat()
 
-	result_dict["ts_value"] = ts_value
+	result_dict["timestamp"] = timestamp
 	result_dict["lat"] = lat
 	result_dict["long"] = long
+	result_dict["tracked_object"] = tracked_object
 
-	print(f"Datetime: {ts_value}, Latitude: {lat}, Longitude: {long}")
+	print(f"Datetime: {timestamp}, Latitude: {lat}, Longitude: {long}, Longitude: {long}, Target: {tracked_object}")
 
 	if os.path.isfile(filepath):
 
@@ -53,4 +121,15 @@ def save_data_as_json(filepath: str, lat, long):
 
 	return None
 
+# Lat, Long
+# -0.56328107, 33.04421661
+# Long, Lat
+source = (33.04421661, -0.56328107)  # Victoria Lake
+# Lat, Long
+# 50.88360814831935, 4.3575478300498744
+# Long, Lat
+dest = (4.35754783, 50.88360814)  # Brussels
+
+json_filepath = setup_structure("tracking_data.json")
+get_route_between_locations(json_filepath, source, dest)
 
