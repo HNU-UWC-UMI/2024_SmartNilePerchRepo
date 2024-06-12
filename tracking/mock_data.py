@@ -12,13 +12,11 @@ from tqdm import tqdm
 # import plotly.express as px
 
 
-def get_route_between_locations(filepath, source: tuple, dest: tuple, tracked_object: str, date_and_time: datetime):
+def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
 
-	date_and_time.replace(minute=0, second=0, microsecond=0)
-
-	if tracked_object != "plane_container":
-		start = "{},{}".format(source[0], source[1])
-		end = "{},{}".format(dest[0], dest[1])
+	if tracked_object == "truck":
+		start = "{},{}".format(route_source[0], route_source[1])
+		end = "{},{}".format(route_dest[0], route_dest[1])
 		# Service - 'route', mode of transportation - 'driving', without alternatives
 		url = 'http://router.project-osrm.org/route/v1/driving/{};{}?alternatives=false&annotations=nodes'.format(start, end)
 
@@ -29,7 +27,7 @@ def get_route_between_locations(filepath, source: tuple, dest: tuple, tracked_ob
 		routejson = r.json()
 		route_nodes = routejson['routes'][0]['legs'][0]['annotation']['nodes']
 
-		### keeping every third element in the node list to optimize time
+		# keeping every nth-element in the node list to optimize time
 		route_list = []
 		for i in range(0, len(route_nodes)):
 			# get every 300. point of 0.1 miles distance = 30 miles distance
@@ -58,19 +56,24 @@ def get_route_between_locations(filepath, source: tuple, dest: tuple, tracked_ob
 				# elif counter > second_border:
 				# 	tracked_object = "plane_container"
 
-				save_data_as_json(filepath, lat, long, date_and_time, tracked_object)
+				save_data_as_json(filepath, lat, long, route_datetime, tracked_object)
 				coordinates.append((lat, long))
-				date_and_time += datetime.timedelta(minutes=60)
+				route_datetime += datetime.timedelta(minutes=60)
 				# counter += 1
 
 			except:
 				continue
 		# print(coordinates[:10])
-		return date_and_time
 
-	date_and_time += datetime.timedelta(hours=3)
-	save_data_as_json(filepath=filepath, lat=dest[1], long=dest[0], date_and_time=date_and_time, tracked_object=tracked_object)
-	return date_and_time
+	elif tracked_object == "boat":
+		route_datetime += datetime.timedelta(hours=2)
+		save_data_as_json(filepath=filepath, lat=route_source[1], long=route_source[0], date_and_time=route_datetime, tracked_object=tracked_object)
+
+	else:  # plane
+		route_datetime += datetime.timedelta(hours=3)
+		save_data_as_json(filepath=filepath, lat=route_dest[1], long=route_dest[0], date_and_time=route_datetime, tracked_object=tracked_object)
+
+	return route_datetime
 
 
 def setup_structure(filename: str = "tracking_data.json"):
@@ -103,7 +106,7 @@ def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 	result_dict["long"] = long
 	result_dict["tracked_object"] = tracked_object
 
-	print(f"Datetime: {timestamp}, Latitude: {lat}, Longitude: {long}, Longitude: {long}, Target: {tracked_object}")
+	# print(f"Datetime: {timestamp}, Latitude: {lat}, Longitude: {long}, Longitude: {long}, Target: {tracked_object}")
 
 	if os.path.isfile(filepath):
 
@@ -113,7 +116,7 @@ def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 
 		with open(filepath, 'r+') as file:
 			json.dump(geo_log, file, sort_keys=True)
-			print(f"Updated '{filepath}' with dumped data")
+			# print(f"Updated '{filepath}' with dumped data")
 
 	else:
 		with open(filepath, 'w') as file:
@@ -127,46 +130,53 @@ def save_data_as_json(filepath: str, lat, long, date_and_time, tracked_object):
 # Lat, Long
 # -0.56328107, 33.04421661
 # Long, Lat
-source = (33.04421661, -0.56328107)  # Victoria Lake
-# Lat, Long
-# 50.88360814831935, 4.3575478300498744
-# Long, Lat
-dest = (4.35754783, 50.88360814)  # Brussels
+# source = (33.04421661, -0.56328107)  # Victoria Lake
+# # Lat, Long
+# # 50.88360814831935, 4.3575478300498744
+# # Long, Lat
+# dest = (4.35754783, 50.88360814)  # Brussels
 
 route_dict = {
 	"route_1": {
 		"source": (33.04421661, -0.56328107),
-		"dest": (32.56389848, 0.32974216),
+		"dest": (32.80135216, 0.15211125),
 		"target_object": "boat"
 	},
 	"route_2": {
+		"source": (32.80135216, 0.15211125),
+		"dest": (32.56389848, 0.32974216),
+		"target_object": "truck"
+	},
+	"route_3": {
 		"source": (32.56389848, 0.32974216),
 		"dest": (32.44064755, 0.06019266),
 		"target_object": "truck"
 	},
-	"route_3": {
+	"route_4": {
 		"source": (32.44064755, 0.06019266),
-		"dest": (25.256819319427102, 55.36431779410911),
+		"dest": (55.36431779410911, 25.256819319427102),
 		"target_object": "plane_container"
 	},
-	"route_4": {
-		"source": (25.256819319427102, 55.36431779410911),
+	"route_5": {
+		"source": (55.36431779410911, 25.256819319427102),
 		"dest": (4.483329753377929, 50.898982303185264),
 		"target_object": "plane_container"
-	},
+	}
 }
 
-destinations = {
-	"victoria_lake": (33.04421661, -0.56328107),
-	"kampala_factory": (32.56389848, 0.32974216),
-	"kampala_airport": (32.44064755, 0.06019266),
-	"dubai_airport": (25.256819319427102, 55.36431779410911),
-	"brussels_airport": (4.483329753377929, 50.898982303185264)
-}
+# destinations = {
+# 	"victoria_lake": (33.04421661, -0.56328107),
+# 	"kampala_factory": (32.56389848, 0.32974216),
+# 	"kampala_airport": (32.44064755, 0.06019266),
+# 	"dubai_airport": (25.256819319427102, 55.36431779410911),
+# 	"brussels_airport": (4.483329753377929, 50.898982303185264)
+# }
 
 
-json_filepath = setup_structure("mocked_tracking_data.json")
+json_filepath = setup_structure("mocked_tracking_data_4.json")
 date_and_time = datetime.datetime.now()
+date_and_time.replace(minute=0, second=0, microsecond=0)
+
 for key, value in route_dict.items():
 	source = value["source"]
 	dest = value["dest"]
