@@ -148,5 +148,6 @@ for key, value in route_dict.items():
 	target_object = value["target_object"]
 
 	date_and_time = get_route_between_locations(json_filepath, source, dest, target_object, date_and_time)
-	print("Finished process successfully")
+
+print("Finished process successfully")
 
