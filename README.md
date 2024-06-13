@@ -29,9 +29,19 @@ Interfaces
 *\<Targets/Requirements>*
 
 *\<Interfaces>*
-
 *\<Concepts>*
 
 *\<Artifacts>*
+
+## Planning
+
+| Group         | Mon        | Tue      | Wed   | Thu  | Fri  |
+|--------------|----------------|-------------------|
+| 1 | .. | ..  | .. | ..| .. |
+| 2 |  Week planning, Issues | Data Base,   | Connecting with the other Groups,  | ..| .. |
+| 3 | .. | ..  | .. | ..| .. |
+| 4 |  .. | ..  | .. | ..| .. |
+
+
 
 *\<Problems/Risks>*
