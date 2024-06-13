@@ -2,6 +2,13 @@
 
 ## Tasks
 
+## Links from the Database
+| Link         |        |
+|--------------|----------------|
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *temp* | 
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *counter* | 
+
+
 ## Stakeholder
 
 | Role         | Contact        | Expectations      |
