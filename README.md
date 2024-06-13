@@ -8,6 +8,7 @@
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *temp* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *counter* | 
 | *https://jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard?orgId=1&refresh=5s&from=1718266788853&to=1718288388854* | *Dashboard temperature* |
+| *https://jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard?orgId=1&refresh=5s&editIndex=0&from=1718267023970&to=1718288623970* | *Dashboard fishcounter* |
 
 ## Stakeholder
 
