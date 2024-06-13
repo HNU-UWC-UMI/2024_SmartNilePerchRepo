@@ -38,7 +38,7 @@ Interfaces
 | Group         | Mon        | Tue      | Wed   | Thu  | Fri  |
 |--------------|----------------|-------------------|-------------|------------|---------|
 | 1 | .. | ..  | .. | ..| .. |
-| 2 |  Week planning, Issues | Data Base,   | Connecting with the other Groups,  | ..| .. |
+| 2 |  Week planning, Issues | Data Base, work with Raspberry Pie   | Connecting with the other Groups, Integration, Testing, Dokumentation, Grafan  | ..| .. |
 | 3 | .. | ..  | .. | ..| .. |
 | 4 |  .. | ..  | .. | ..| .. |
 
