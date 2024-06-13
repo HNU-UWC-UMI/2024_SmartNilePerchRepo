@@ -5,9 +5,10 @@ import time
 import requests
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
+import http.client
 
 
-def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
+def get_route_between_locations(route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
 
 	if tracked_object == "truck":
 		start = "{},{}".format(route_source[0], route_source[1])
@@ -29,7 +30,7 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 			if i % 60 == 1:
 				route_list.append(route_nodes[i])
 
-		coordinates = []
+		# coordinates = []
 
 		for node in tqdm(route_list):
 			try:
@@ -37,24 +38,63 @@ def get_route_between_locations(filepath, route_source: tuple, route_dest: tuple
 				r = requests.get(url, headers=headers)
 				myroot = ET.fromstring(r.text)
 				for child in myroot:
-					lat, long = child.attrib['lat'], child.attrib['lon']
+					post_lat, post_long = child.attrib['lat'], child.attrib['lon']
 
-				save_data_as_json(filepath, lat, long, route_datetime, tracked_object)
-				coordinates.append((lat, long))
-				route_datetime += datetime.timedelta(minutes=60)
+				route_datetime += datetime.timedelta(minutes=10)
+				post_data_to_db(post_lat, post_long, route_datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), tracked_object)
 
 			except:
 				continue
 
 	elif tracked_object == "boat":
 		route_datetime += datetime.timedelta(hours=2)
-		save_data_as_json(filepath=filepath, lat=route_source[1], long=route_source[0], datetime_value=route_datetime, tracked_object=tracked_object)
-
+		post_lat = route_source[1]
+		post_long = route_source[0]
+		post_data_to_db(post_lat, post_long, route_datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), tracked_object)
 	else:  # plane
 		route_datetime += datetime.timedelta(hours=3)
-		save_data_as_json(filepath=filepath, lat=route_dest[1], long=route_dest[0], datetime_value=route_datetime, tracked_object=tracked_object)
-
+		post_lat = route_dest[1]
+		post_long = route_dest[0]
+		post_data_to_db(post_lat, post_long, route_datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), tracked_object)
 	return route_datetime
+
+
+def post_data_to_db(lat, long, timestamp_string: str, tracked_object: str, gps_origin: str = "mocked"):
+
+	host = 'apex.oracle.com'
+	endpoint = '/pls/apex/hackathonjune2024/NilePProject/GpsData'
+
+	data = {
+		"longi": long,
+		"lati": lat,
+		"TimeStamp": timestamp_string,
+		"targetOBJ": tracked_object,
+		"gpsOrigin": gps_origin
+	}
+
+	json_data = json.dumps(data)
+
+	# Set headers
+	headers = {
+		'Content-Type': 'application/json; charset=UTF-8'
+	}
+
+	try:
+
+		conn = http.client.HTTPSConnection(host, timeout=10)
+		conn.request("POST", endpoint, body=json_data, headers=headers)
+		response = conn.getresponse()
+		conn.close()
+
+		if response.status == 200:
+			# print('Location data sent successfully')
+			pass
+		else:
+			print(f'Failed to send location data. Error {response.status}')
+	except Exception as e:
+		print(f'An error occurred: {e}')
+
+	return None
 
 
 def setup_structure(filename: str = "tracking_data.json", init: bool = False):
@@ -85,8 +125,6 @@ def save_data_as_json(filepath: str, lat, long, datetime_value, tracked_object):
 	result_dict["lat"] = lat
 	result_dict["long"] = long
 	result_dict["tracked_object"] = tracked_object
-
-	# print(f"Datetime: {timestamp}, Latitude: {lat}, Longitude: {long}, Longitude: {long}, Target: {tracked_object}")
 
 	if os.path.isfile(filepath):
 
@@ -140,14 +178,14 @@ date_and_time = datetime.datetime.now()
 datetime_for_name = date_and_time.strftime("%Y%m%d_%H%M%S")
 date_and_time.replace(minute=0, second=0, microsecond=0)
 
-json_filepath = setup_structure(f"{datetime_for_name}_tracking_data.json")
+# json_filepath = setup_structure(f"{datetime_for_name}_tracking_data.json")
 
 for key, value in route_dict.items():
 	source = value["source"]
 	dest = value["dest"]
 	target_object = value["target_object"]
 
-	date_and_time = get_route_between_locations(json_filepath, source, dest, target_object, date_and_time)
+	date_and_time = get_route_between_locations(source, dest, target_object, date_and_time)
 
 print("Finished process successfully")
 
