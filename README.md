@@ -48,7 +48,7 @@ Interfaces
 | 1 | .. | ..  | .. | ..| .. |
 | 2 |  Week planning, Issues | Data Base, work with Raspberry Pie   | Connecting with the other Groups, Integration, Testing, Dokumentation, Grafan  | ..| .. |
 | 3 | .. | ..  | .. | ..| .. |
-| 4 |  .. | ..  | .. | ..| .. |
+| 4 |  General Planning procedures / increment for group and the whole project | Deciding on a DBMS | Getting started on Oracle Apex / Table Creation / REST-API | Integrating the other Groups in the DB / Refining Processes / Integrating the general Form for the Insepctor / Creation of UI-Interface using Oracle Apex| Presentation |
 
 
 
