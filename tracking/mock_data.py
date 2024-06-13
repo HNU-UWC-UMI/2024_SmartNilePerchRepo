@@ -9,7 +9,15 @@ import http.client
 
 
 def get_route_between_locations(route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
-
+	"""
+	calls an api to get the best truck route and posts the waypoints into the database
+	:param route_source: tuple - with the coordinates (long, lat) of the starting point
+	:param route_dest: tuple - with the coordinates (long, lat) of the destination point
+	:param tracked_object: str - which type of object is tracked
+	:param route_datetime: datetime - with the current datetime
+	(altered if multiple points are written in for realistic data)
+	:return: route_datetime with additional time
+	"""
 	if tracked_object == "truck":
 		start = "{},{}".format(route_source[0], route_source[1])
 		end = "{},{}".format(route_dest[0], route_dest[1])
@@ -60,6 +68,14 @@ def get_route_between_locations(route_source: tuple, route_dest: tuple, tracked_
 
 
 def post_data_to_db(lat, long, timestamp_string: str, tracked_object: str, gps_origin: str = "mocked"):
+	"""
+	:param lat: float - latitude of the point
+	:param long: float - longitude of the point
+	:param timestamp_string: string - current datetime
+	:param tracked_object: string - which type of object is tracked
+	:param gps_origin: string - if it is "real" or "mocked" data
+	:return: None
+	"""
 
 	host = 'apex.oracle.com'
 	endpoint = '/pls/apex/hackathonjune2024/NilePProject/GpsData'
@@ -98,6 +114,12 @@ def post_data_to_db(lat, long, timestamp_string: str, tracked_object: str, gps_o
 
 
 def setup_structure(filename: str = "tracking_data.json", init: bool = False):
+	"""
+	NOT USED ANYMORE - To create the directory structure for the json file
+	:param filename: str - of the json file
+	:param init: bool - If the structure should be created | default = False
+	:return: str - complete filepath
+	"""
 	dir_filepath = "data/"
 
 	if init:
@@ -109,6 +131,11 @@ def setup_structure(filename: str = "tracking_data.json", init: bool = False):
 
 
 def create_dirs(parent_dir):
+	"""
+	Helper function. Creates dirs of filepath
+	:param parent_dir: directories of the file
+	:return: None
+	"""
 	try:
 		os.makedirs(parent_dir)
 	except FileExistsError:
@@ -117,6 +144,15 @@ def create_dirs(parent_dir):
 
 
 def save_data_as_json(filepath: str, lat, long, datetime_value, tracked_object):
+	"""
+	saves location and datetime as a json
+	:param filepath: str - path of json
+	:param lat: float - latitude
+	:param long: float - longitude
+	:param datetime_value: datetime - current datetime
+	:param tracked_object: type of tracked object
+	:return: None
+	"""
 	result_dict = dict()
 
 	timestamp = datetime_value.isoformat()
