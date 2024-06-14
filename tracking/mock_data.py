@@ -1,4 +1,3 @@
-import os
 import datetime
 import json
 import time
@@ -37,8 +36,6 @@ def get_route_between_locations(route_source: tuple, route_dest: tuple, tracked_
 			# keep every nth-point of 0.1 miles distance = n miles distance
 			if i % 60 == 1:
 				route_list.append(route_nodes[i])
-
-		# coordinates = []
 
 		for node in tqdm(route_list):
 			try:
@@ -113,108 +110,48 @@ def post_data_to_db(lat, long, timestamp_string: str, tracked_object: str, gps_o
 	return None
 
 
-def setup_structure(filename: str = "tracking_data.json", init: bool = False):
+def define_routes():
 	"""
-	NOT USED ANYMORE - To create the directory structure for the json file
-	:param filename: str - of the json file
-	:param init: bool - If the structure should be created | default = False
-	:return: str - complete filepath
+	defines the dict, which will be used for the destinations of the route
+	:return: routing_dict - dictionary
 	"""
-	dir_filepath = "data/"
-
-	if init:
-		create_dirs(dir_filepath)
-
-	filepath = dir_filepath + filename
-
-	return filepath
-
-
-def create_dirs(parent_dir):
-	"""
-	Helper function. Creates dirs of filepath
-	:param parent_dir: directories of the file
-	:return: None
-	"""
-	try:
-		os.makedirs(parent_dir)
-	except FileExistsError:
-		pass
-	return None
-
-
-def save_data_as_json(filepath: str, lat, long, datetime_value, tracked_object):
-	"""
-	saves location and datetime as a json
-	:param filepath: str - path of json
-	:param lat: float - latitude
-	:param long: float - longitude
-	:param datetime_value: datetime - current datetime
-	:param tracked_object: type of tracked object
-	:return: None
-	"""
-	result_dict = dict()
-
-	timestamp = datetime_value.isoformat()
-
-	result_dict["timestamp"] = timestamp
-	result_dict["lat"] = lat
-	result_dict["long"] = long
-	result_dict["tracked_object"] = tracked_object
-
-	if os.path.isfile(filepath):
-
-		json_file = open(filepath)
-		geo_log = json.load(json_file)
-		geo_log.append(result_dict)
-
-		with open(filepath, 'r+') as file:
-			json.dump(geo_log, file, sort_keys=True)
-			# print(f"Updated '{filepath}' with dumped data")
-
-	else:
-		with open(filepath, 'w') as file:
-			geo_log = [result_dict]
-			json.dump(geo_log, file, sort_keys=True)
-			print(f"Created '{filepath}' with dumped data")
-
-	return None
-
-
-# (Long, Lat)
-route_dict = {
-	"route_1": {
-		"source": (33.04421661, -0.56328107),  # - victoria lake
-		"dest": (32.80135216, 0.15211125),  # - victoria lake coast
-		"target_object": "boat"
-	},
-	"route_2": {
-		"source": (32.80135216, 0.15211125),  # - victoria lake coast
-		"dest": (32.56389848, 0.32974216),  # - kampala factory
-		"target_object": "truck"
-	},
-	"route_3": {
-		"source": (32.56389848, 0.32974216),   # - kampala factory
-		"dest": (32.44064755, 0.06019266),  # - kampala airport
-		"target_object": "truck"
-	},
-	"route_4": {
-		"source": (32.44064755, 0.06019266),  # - kampala airport
-		"dest": (55.36431779410911, 25.256819319427102),  # - dubai airport
-		"target_object": "plane"
-	},
-	"route_5": {
-		"source": (55.36431779410911, 25.256819319427102),  # - dubai airport
-		"dest": (4.483329753377929, 50.898982303185264),  # - brussels airport
-		"target_object": "plane"
+	# (Long, Lat)
+	routing_dict = {
+		"route_1": {
+			"source": (33.04421661, -0.56328107),  # - victoria lake
+			"dest": (32.80135216, 0.15211125),  # - victoria lake coast
+			"target_object": "boat"
+		},
+		"route_2": {
+			"source": (32.80135216, 0.15211125),  # - victoria lake coast
+			"dest": (32.56389848, 0.32974216),  # - kampala factory
+			"target_object": "truck"
+		},
+		"route_3": {
+			"source": (32.56389848, 0.32974216),  # - kampala factory
+			"dest": (32.44064755, 0.06019266),  # - kampala airport
+			"target_object": "truck"
+		},
+		"route_4": {
+			"source": (32.44064755, 0.06019266),  # - kampala airport
+			"dest": (55.36431779410911, 25.256819319427102),  # - dubai airport
+			"target_object": "plane"
+		},
+		"route_5": {
+			"source": (55.36431779410911, 25.256819319427102),  # - dubai airport
+			"dest": (4.483329753377929, 50.898982303185264),  # - brussels airport
+			"target_object": "plane"
+		}
 	}
-}
+	return routing_dict
+
+
+print("Starting the creation of mocking data")
 
 date_and_time = datetime.datetime.now()
-datetime_for_name = date_and_time.strftime("%Y%m%d_%H%M%S")
 date_and_time.replace(minute=0, second=0, microsecond=0)
 
-# json_filepath = setup_structure(f"{datetime_for_name}_tracking_data.json")
+route_dict = define_routes()
 
 for key, value in route_dict.items():
 	source = value["source"]
