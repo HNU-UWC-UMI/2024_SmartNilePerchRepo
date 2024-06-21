@@ -1,8 +1,49 @@
 # Introduction and Targets
+small description 2-3 sentences
+Document about Fish-Transportation in Uganda: 
+Link to Miro-Board: https://miro.com/app/board/uXjVMTfASQ4=/
 
 ## Tasks
 
-## Links from the Database
+create links to UserStories from Project
+
+## Stakeholder
+
+| Role         | Contact        | Expectations      |
+|--------------|----------------|-------------------|
+| Product Owner| dany.meyer@hnu.de | I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
+| *\<Rolle-2>* | *\<Kontakt-2>* | *\<Erwartung-2>*  |
+
+## Sub-Projects / Team
+
+| Sub-Project/Modul | Names + Responsibility      |  
+|--------------|----------------|
+| *\<Example Modul>*  | *\<Micky Mouse (py-Code), Donald Duck (documentation+test), , Name4>*  |
+| *\<Apex-Backend>*  | *\<Name1, Name2, Name3, Name4>*  |
+| *\<Counter+Box>*  | *\<Name1, Name2, Name3, Name4>*  |
+| *\<Temperature+Grafana>*  | *\<Name1, Name2, Name3, Name4>*  |
+| *\<GPS App>*  | *\<Name1, Name2, Name3, Name4>*  |
+
+# Systemarchitecture
+
+Modules  
+*\<Short Description e.g.>*
+1. The Module Apex-Backend is used to store data, provide REST interfaces and dialogs for data input and reporting
+2. The Module IoT-Counter is used ..
+3. The Module IoT-Temp is used ..
+4. The Module GPS-App is used ..
+
+Interfaces  
+*\<Short Description of interfaces>*
+
+## Module Apex-Backend
+* *\<Target/Requirement>*
+* *\<Interfaces>*
+* *\<Concepts>*
+* *\<Artifacts>*
+
+
+# Links from the Database
 | Link         |        |
 |--------------|----------------|
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *temp* | 
@@ -10,38 +51,8 @@
 | *https://jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard?orgId=1&refresh=5s&from=1718266788853&to=1718288388854* | *Dashboard temperature* |
 | *https://jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard?orgId=1&refresh=5s&editIndex=0&from=1718267023970&to=1718288623970* | *Dashboard fishcounter* |
 
-## Stakeholder
 
-| Role         | Contact        | Expectations      |
-|--------------|----------------|-------------------|
-| *\<Rolle-1>* | *\<Kontakt-1>* | *\<Erwartung-1>*  |
-| *\<Rolle-2>* | *\<Kontakt-2>* | *\<Erwartung-2>*  |
-
-## Team / Sub-Projects
-
-| Name         | Rolle(n)       | Sub-Project/Modul |
-|--------------|----------------|-------------------|
-| *\<Name-1>*  | *\<Rolle(n)>*  |                   |
-| *\<Name-2>*  | *\<Rolle(n)>*  |                   |
-
-# Systemarchitecture
-
-Modules  
-*\<Short Description e.g. Module1>*
-
-Interfaces  
-*\<Short Description of interfaces>*
-
-## Module 1
-
-*\<Targets/Requirements>*
-
-*\<Interfaces>*
-*\<Concepts>*
-
-*\<Artifacts>*
-
-## Planning
+# Planning
 
 | Group         | Mon        | Tue      | Wed   | Thu  | Fri  |
 |--------------|----------------|-------------------|-------------|------------|---------|
