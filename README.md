@@ -1,6 +1,8 @@
 # Introduction and Targets
 small description 2-3 sentences  
 Document about Fish-Transportation in Uganda: [link](./doc/Fish%20Transportation%20in%20Uganda.pdf)  
+End Presentation: [link](.???)  
+
 Link to Miro-Board: https://miro.com/app/board/uXjVMTfASQ4=/  
 
 ## Tasks
@@ -11,20 +13,25 @@ create links to UserStories from Project
 
 | Role         | Contact        | Expectations      |
 |--------------|----------------|-------------------|
-| Product Owner| dany.meyer@hnu.de | I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
+| Product Owner| dany.meyer@hnu.de | The need for wireless technologies and tracking systems (architecture) makes a business sense in terms of cold chain management of the container for safety of fish and remote tracking for security of fish. I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
 | *\<Rolle-2>* | *\<Kontakt-2>* | *\<Erwartung-2>*  |
 
 ## Sub-Projects / Team
 
-| Sub-Project/Modul | Names + Responsibility      |  
-|--------------|----------------|
-| *\<Example Modul>*  | *\<Micky Mouse (py-Code), Donald Duck (documentation+test), , Name4>*  |
-| *\<Apex-Backend>*  | *\<Name1, Name2, Name3, Name4>*  |
-| *\<Counter+Box>*  | *\<Name1, Name2, Name3, Name4>*  |
-| *\<Temperature+Grafana>*  | *\<Name1, Name2, Name3, Name4>*  |
-| *\<GPS App>*  | *\<Name1, Name2, Name3, Name4>*  |
+| Sub-Project/Modul | Team | Names + Responsibility      |  
+|--------------|----------------|----------------|
+| *\<Example Modul>*  | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)|
+| Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
+| Apex-Forms  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
+| IoT-Counter  |  Team 3 |*\<Name1, Name2, Name3, Name4>*  |
+| IoT-Temperature |  Team 2 |*\<Name1, Name2, Name3, Name4>*  |
+| Grafana  |  Team 2 |*\<Name1, Name2, Name3, Name4>*  |
+| GPS-Flutter-App |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
+| GPS-Map  |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
 
 # Systemarchitecture
+Picture  
+*\<Link a picture>*  
 
 Modules  
 *\<Short Description e.g.>*
@@ -32,15 +39,40 @@ Modules
 2. The Module IoT-Counter is used ..
 3. The Module IoT-Temp is used ..
 4. The Module GPS-App is used ..
+5. ...
 
 Interfaces  
 *\<Short Description of interfaces>*
 
-## Module Apex-Backend
+## Module Apex-Backend: DB-Model
 * *\<Target/Requirement>*
-* *\<Interfaces>*
-* *\<Concepts>*
-* *\<Artifacts>*
+* *\<Interfaces: links to GET + POST + examples of JSON>*
+* *\<Concepts: ER-Diagramm>*
+* *\<Artifacts: link to ddl>*
+* *\<Artifacts: screenShots of Apex-Forms>*
+* *\<Access to Apex: link / user /pwd>*
+
+## Module IoT-Counter+Temp (both Teams together)
+* *\<Target/Requirement>*
+* *\<Interfaces: links to POST>*
+* *\<Concepts: Description of Logic + used Hardware>*
+* *\<Artifacts: links to py-Code>*
+* *\<Artifacts: fotos of Box>*
+
+## Module GPS
+* *\<Target/Requirement>*
+* *\<Interfaces: link to GET's + POST + examples of JSON>*
+* *\<Concepts: Flutter App, Map>*
+* *\<Artifacts: link to Flutter-Project>*
+* *\<Artifacts: link to py..>*
+* *\<Artifacts: screenShots of..>*
+ 
+## Module Grafana
+* *\<Target/Requirement>*
+* *\<Interfaces: links to GET>*
+* *\<Concepts: which Platform>*
+* *\<Artifacts: screenShots Grafana>*
+
 
 
 # Links from the Database
