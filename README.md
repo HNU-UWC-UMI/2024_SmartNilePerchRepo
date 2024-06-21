@@ -1,6 +1,6 @@
 # Introduction and Targets
 small description 2-3 sentences  
-Document about Fish-Transportation in Uganda:   
+Document about Fish-Transportation in Uganda: [link](./doc/Fish%20Transportation%20in%20Uganda.pdf)  
 Link to Miro-Board: https://miro.com/app/board/uXjVMTfASQ4=/  
 
 ## Tasks
