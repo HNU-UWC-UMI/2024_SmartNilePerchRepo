@@ -21,7 +21,7 @@ create links to UserStories from Project
 | Sub-Project/Modul | Team | Names + Responsibility      |  
 |--------------|----------------|----------------|
 | *\<Example Modul>*  | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)|
-| Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
+| Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*  |
 | Apex-Forms  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
 | IoT-Counter  |  Team 3 |*\<Name1, Name2, Name3, Name4>*  |
 | IoT-Temperature |  Team 2 |*\<Name1, Name2, Name3, Name4>*  |
@@ -80,6 +80,9 @@ Interfaces
 |--------------|----------------|
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *temp* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *counter* | 
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *description* | 
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *gps* | 
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *inspector-form* | 
 | *https://jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard?orgId=1&refresh=5s&from=1718266788853&to=1718288388854* | *Dashboard temperature* |
 | *https://jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard?orgId=1&refresh=5s&editIndex=0&from=1718267023970&to=1718288623970* | *Dashboard fishcounter* |
 
