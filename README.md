@@ -10,7 +10,7 @@ Link to Miro-Board: https://miro.com/app/board/uXjVMTfASQ4=/
 
 ## Tasks
 
-Link to user stories:[User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/issues)
+Link to user stories: [User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/issues)
 
 ## Stakeholder
 
