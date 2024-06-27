@@ -55,7 +55,7 @@ Interfaces
 
 ## Module IoT-Counter+Temp (both Teams together)
 * *\<Target/Requirement>*
-* *\<Interfaces: links to POST>* [Temperature](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA)
+* *\<Interfaces: links to POST>* [Temperature](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA) [Fish_size](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA) [Counter](apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA)
 * *\<Concepts: Description of Logic + used Hardware>*
 * *\<Artifacts: links to py-Code>* [Counter](./raspberry/Counter.py)   [DB_Creation](./raspberry/creating_db_fish_size.py)   [Temp](./raspberry/Temp.py)
 * *\<Artifacts: fotos of Box>* [Box](./images/SmartContainer_Box.jpeg) 
