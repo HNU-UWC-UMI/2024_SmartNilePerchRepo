@@ -1,5 +1,6 @@
 # Introduction and Targets
-small description 2-3 sentences  
+This Hackathon took place between June 10 to 14 at the Neu-Ulm University of applied Science in Germany. For one week, 17 dedicated students from three different countries came together to work on solutions to urgent problems in Uganda's fisheries. The participants formed four mixed teams of four to five students each from Neu-Ulm University of Applied Sciences, the University of Western Cape in South Africa and the Uganda Management Institute. The idea of this Hackathon came through the visits of the lecturers and professors of the project team from Neu-Ulm University of Applied Sciences (HNU), the University of the Western Cape (UWC) and the Uganda Management University (UMI) to Uganda in May 2024. 
+
 Document about Fish-Transportation in Uganda: [link](./doc/Fish%20Transportation%20in%20Uganda.pdf)  
 End Presentation: [link](.???)  
 
