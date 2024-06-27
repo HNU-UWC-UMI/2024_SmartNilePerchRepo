@@ -17,8 +17,8 @@ Link to user stories: [User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerc
 | Role         | Contact        | Expectations      |
 |--------------|----------------|-------------------|
 | Product Owner| dany.meyer@hnu.de | The need for wireless technologies and tracking systems (architecture) makes a business sense in terms of cold chain management of the container for safety of fish and remote tracking for security of fish. I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
-| *DAAD and BMZ* | *<Kontakt-2>* | *strengthen university partnerships, create opportunities for home university students and internatial students to work together and experience intercultural contacts>*  |
-| *Uganda fisherie* | *\<Kontakt-2>* | *a smart and more efficient solution of transporting fish from victoria lake in Uganda to EU>*  |
+| DAAD and BMZ | *<Kontakt-2>* | strengthen university partnerships, create opportunities for home university students and internatial students to work together and experience intercultural contacts  |
+| Uganda fisherie | *\<Kontakt-2>* | a smart and more efficient solution of transporting fish from victoria lake in Uganda to EU  |
 
 ## Sub-Projects / Team
 
