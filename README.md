@@ -76,7 +76,7 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
-* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/public-dashboards), [Temperature](//jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard) 
+* *\<Interfaces: links to GET>* [Fish counter](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA?/orders/${orderId), [Temperature](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA?/orders/${orderId) 
 * *\<Concepts: which Platform>*
 * *\<Artifacts: screenShots Grafana>*
 
