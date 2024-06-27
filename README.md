@@ -72,11 +72,14 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 (`{"longi": 10.009358339673302, "lati": 48.38061466653206, "TimeStamp": 2024-06-27 19:50:00, "targetOBJ": "truck", "gpsOrigin": "real"}`)
 * *Concepts:* 
   * *Flutter-App:* 
-  * *Map*: 
+  * *Map*: It's python code that works in conjuction with the folium library. Folium is a python implementation of the leaflet javascript package. Folium uses the OpenStreetMap as a base and you can add things like lines and markes to it with arbritary coordinates (latitude and longitude).
 * Flutter App, Map>*
 * *\<Artifacts: link to Flutter-Project>*
-* *\<Artifacts: link to py..>*
-* *\<Artifacts: screenShots of..>*
+* *Artifacts: link to a working [jupyter notebook](./tracking/map/geo_map.ipynb). It also contains many information on what how code works. It also includes examples and extras not implemented in the python file mentioned below.*
+* *Artifacts: link to a working [py](./tracking/map/map.py)*
+* *Artifacts: link to a working [map.html](./tracking/map/map.html). Downloading and opening this html file shows what you can expect from the python code.*
+
+* *Artifacts: Screenshot of DB Request to use with plotting things on the map ![plot](./tracking/map/artefacts/artefact_db_request_to_df.png)*
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
