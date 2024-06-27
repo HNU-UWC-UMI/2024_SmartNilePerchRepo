@@ -14,7 +14,7 @@ samples, guidance on mobile development, and a full API reference.
 ## First Steps to create your Backend with Oracle Apex
 Orcale Apex is a framework to design and hosting a database, create web-based-Apps on that database configering UI-Forms and enable easy to use RESTful interfaces to your database.
 - [Getting Started with Oracle Apex](https://apex.oracle.com/en/learn/build-your-first-app/)
-- [UWC and HNU video casts] (will you find in our moodle)
+- [UWC and HNU video casts](https://drive.google.com/drive/u/2/folders/1SoG_IWI5g6zdYH-hEQX8hR4LFqKn-yCN)
 ## Backend with InfluxDB and Grafana
 ## Introduction into IoT using RaspPi and Arduino
 Here you will find some tutorials to programming Microcontroller to read sensors, control actors and connect to an infrastructure like RESTful webService:
