@@ -26,8 +26,8 @@ Link to user stories: [User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerc
 | *\<Example Modul>*  | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)|
 | Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*  |
 | Apex-Forms  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
-| IoT-Counter  |  Team 3 |*\<Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)>*  |
-| IoT-Temperature |  Team 2 |*\<Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)>*  |
+| IoT-Counter  |  Team 3 |*\<Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test, doc), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)>*  |
+| IoT-Temperature |  Team 2 |*\<Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB, doc), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)>*  |
 | Grafana  |  Team 2 |*\<Siyabonga Luvuno Jele, Jenny Gia-Linh Huynh, Name3, Name4>*  |
 | GPS-Flutter-App |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
 | GPS-Map  |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
@@ -80,7 +80,7 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
 * *\<Interfaces: links to GET>* [Fish counter](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA?/orders/${orderId}), [Temperature](//apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA?/orders/${orderId}) 
-* *\<Concepts: which Platform>* 
+* *\<Concepts: which Platform>* We used Grafana to visualize real time data of fish counter, temperature and if the temperature is in the supposed to be range. We display the datas on different dashboards and used different panels like bar chart and graphs. Each panel can be customized with different visualization options, query settings, and display styles. With queries we retrieved the datas from different data sources like temperature from the DHT22 Sensor or fish counter from the infrared sensor. With threshold, we are able to display an alert message, if the temperature is not within the supposed to be range, e.g. if the temperature is above 0° C, the dashboard will show the temperature in red color, if its below 0°C, it will show in green color.
 * *\<Artifacts: screenShots Grafana>* [Counter](./images/Dashboard/Img_fish_counter.png), [Temperature Series](./images/Dashboard/Img_Temperature_Series.png), [Temperature Table](./images/Dashboard/Img_Temperature_Table.png), [Temperature Table](./images/Dashboard/Img_Temperature_in_Range.png)
 
 
