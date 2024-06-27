@@ -75,7 +75,7 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
   * *Map*: It's python code that works in conjuction with the folium library. Folium is a python implementation of the leaflet javascript package. Folium uses the OpenStreetMap as a base and you can add things like lines and markes to it with arbritary coordinates (latitude and longitude).
 * Flutter App, Map>*
 * *\<Artifacts: link to Flutter-Project>*
-* *Artifacts: link to a working [jupyter notebook](./tracking/map/geo_map.ipynb). It also contains many information on what how code works. It also includes examples and extras not implemented in the python file mentioned below.*
+* *Artifacts: link to a working [jupyter notebook](./tracking/map/geo_map.ipynb). It also contains many information on how code works. It also includes examples and extras not implemented in the python file mentioned below.*
 * *Artifacts: link to a working [py](./tracking/map/map.py)*
 * *Artifacts: link to a working [map.html](./tracking/map/map.html). Downloading and opening this html file shows what you can expect from the python code.*
 
@@ -105,7 +105,7 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 
 | Group         | Mon        | Tue      | Wed   | Thu  | Fri  |
 |--------------|----------------|-------------------|-------------|------------|---------|
-| 1 | .. | ..  | .. | ..| .. |
+| 1 | Week planning | Setting up devices, Creating mocking data, DB architecture  | Creating map, Further create mocking data | Getting sensor data from device, Settling on API for DB to map, Connecting to DB | Implementing real sensor data on map, Last minute fixes, Presentation |
 | 2 |  Week planning, Issues | Data Base, work with Raspberry Pie   | Connecting with the other Groups, Integration, Testing, Dokumentation, Grafan  | Grafana, Data base, work with group 3 | Presentation |
 | 3 | General planning/identifting/defining tools to use/understanding the integration of the the use case | looking at the raspeberry and the different sensors to use that will be applicable for counting and measuring the fish/created a simulation environment to use the scale to define weight of the fish. The simualation code worked but we change the plan to use a infared sensor | Integrating count system with temperature system | Database implemention and connection| Building the system and presentation |
 | 4 |  General Planning procedures / increment for group and the whole project | Prepraring a Prototyp for the UI using MIRO / Deciding on a DBMS + First Considerations about InfluxDB / Firebase and finally Oracle Apex + Establishing first ER & ERR_Models| Getting started on Oracle Apex / Table Creation / REST-API | Integrating the other Groups in the DB / Refining Processes / Integrating the general Form for the Insepctor / Creation of UI-Interface using Oracle Apex| Final Refinements before the Presentation (Integration of the optimized Inspector_Report + Preparation Process for the Final_Presentation |
