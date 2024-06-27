@@ -23,11 +23,12 @@ create links to UserStories from Project
 | *\<Example Modul>*  | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)|
 | Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*  |
 | Apex-Forms  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
-| IoT-Counter  |  Team 3 |*\<Alexander Schobloch, Julia Hosch, Yusuf Gitta, Nomonde Bridgette Zama>*  |
+| IoT-Counter  |  Team 3 |*\<Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)>*  |
 | IoT-Temperature |  Team 2 |*\<Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)>*  |
 | Grafana  |  Team 2 |*\<Siyabonga Luvuno Jele, Jenny Gia-Linh Huynh, Name3, Name4>*  |
 | GPS-Flutter-App |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
 | GPS-Map  |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
+| Box Prototyp |  Team 2 / Team 3 |*\<Alexander Schobloch, Julia Hosch, Jenny Gia-Linh Huynh, Siyabonga Jele>*  |
 
 # Systemarchitecture
 Picture  
