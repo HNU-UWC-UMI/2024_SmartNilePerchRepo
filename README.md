@@ -53,10 +53,16 @@ Interfaces
 * *\<Artifacts: screenShots of Apex-Forms>*
 * *\<Access to Apex: link / user /pwd>*
 
+
 ## Module IoT-Counter+Temp (both Teams together)
-* *\<Target/Requirement>*
+* *\<Target/Requirement>* Monitoring the temperature of the box of fish, so they don`t spoil. Counting the amount of fish, so the landing site knows how many trucks they then need to transport the fish. For this Use case we need a mobile power source and an internet connection is assumed.
 * *\<Interfaces: links to POST>* [Line 70](./raspberry/Counter.py)   [Line 23](./raspberry/creating_db_fish_size.py)   [Line 53](./raspberry/Temp.py)
-* *\<Concepts: Description of Logic + used Hardware>*
+* *\<Concepts: Description of Logic + used Hardware>* We used a raspberry pi as our base computer. For the temperature we used an DHT22 Sensor.
+For the Counting of the Fish we used an infrared sensor to see if a fish is being put into the box.
+Adding to that we installed a button so when they take the fish out the counting process will be stopped, by pressing said button.
+Another feature we added was an LED panel to indicate if the counter is running at the moment. If its green it is running, and if not its red. It will blink yellow if it's over the limit. We put the limit to 10 for presentation purposes.
+Add the start the counting mechanism is off, and can be turned oon by pressing the button.
+We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to the GPIO 23 , the button to GPIO 17 Pin, for the LED we used 27 for red, 22 for green, and 25 for yellow.
 * *\<Artifacts: links to py-Code>* [Counter](./raspberry/Counter.py)   [DB_Creation](./raspberry/creating_db_fish_size.py)   [Temp](./raspberry/Temp.py)
 * *\<Artifacts: fotos of Box>* [Box](./images/SmartContainer_Box.jpeg) 
 
