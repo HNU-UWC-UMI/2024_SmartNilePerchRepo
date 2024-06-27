@@ -7,7 +7,7 @@ from tqdm import tqdm
 import http.client
 
 
-def get_route_between_locations(route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
+def get_route_waypoints(route_source: tuple, route_dest: tuple, tracked_object: str, route_datetime: datetime):
 	"""
 	calls an api to get the best truck route and posts the waypoints into the database
 	:param route_source: tuple - with the coordinates (long, lat) of the starting point
@@ -113,6 +113,7 @@ def post_data_to_db(lat, long, timestamp_string: str, tracked_object: str, gps_o
 def define_routes():
 	"""
 	defines the dict, which will be used for the destinations of the route
+	Info: Please use the format (Long, Lat) for the coordinates
 	:return: routing_dict - dictionary
 	"""
 	# (Long, Lat)
@@ -158,7 +159,7 @@ for key, value in route_dict.items():
 	dest = value["dest"]
 	target_object = value["target_object"]
 
-	date_and_time = get_route_between_locations(source, dest, target_object, date_and_time)
+	date_and_time = get_route_waypoints(source, dest, target_object, date_and_time)
 
 print("Finished process successfully")
 

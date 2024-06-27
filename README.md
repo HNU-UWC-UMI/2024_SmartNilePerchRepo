@@ -11,24 +11,24 @@ create links to UserStories from Project
 
 ## Stakeholder
 
-| Role         | Contact        | Expectations      |
-|--------------|----------------|-------------------|
-| Product Owner| dany.meyer@hnu.de | The need for wireless technologies and tracking systems (architecture) makes a business sense in terms of cold chain management of the container for safety of fish and remote tracking for security of fish. I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
-| *\<Rolle-2>* | *\<Kontakt-2>* | *\<Erwartung-2>*  |
+| Role         | Contact             | Expectations      |
+|--------------|---------------------|-------------------|
+| Product Owner| dany.meyer@hnu.de   | The need for wireless technologies and tracking systems (architecture) makes a business sense in terms of cold chain management of the container for safety of fish and remote tracking for security of fish. I expect a system as a prototype with which I can demonstrate a digital solution that monitors and evaluates the temperature and position of a box. I would like to experience the creation of the prototype within a week by an agile team.|
+| *\<Rolle-2>* | *\<Kontakt-2>*      | *\<Erwartung-2>*  |
 
 ## Sub-Projects / Team
 
-| Sub-Project/Modul | Team | Names + Responsibility      |  
-|--------------|----------------|----------------|
-| *\<Example Modul>*  | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)|
-| Apex-DB  |  Team 4 |*\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*  |
-| Apex-Forms  |  Team 4 |*\<Name1, Name2, Name3, Name4>*  |
-| IoT-Counter  |  Team 3 |*\<Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)>*  |
-| IoT-Temperature |  Team 2 |*\<Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)>*  |
-| Grafana  |  Team 2 |*\<Siyabonga Luvuno Jele, Jenny Gia-Linh Huynh, Name3, Name4>*  |
-| GPS-Flutter-App |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
-| GPS-Map  |  Team 1 |*\<Name1, Name2, Name3, Name4>*  |
-| Box Prototyp |  Team 2 / Team 3 |*\<Alexander Schobloch, Julia Hosch, Jenny Gia-Linh Huynh, Siyabonga Jele>*  |
+| Sub-Project/Modul      | Team | Names + Responsibility                                                                                                                                                  |  
+|------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *\<Example Modul>*     | Team A | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)                                                                                                            |
+| Apex-DB                |  Team 4 | *\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*                                                                                            |
+| Apex-Forms             |  Team 4 | *\<Name1, Name2, Name3, Name4>*                                                                                                                                         |
+| IoT-Counter            |  Team 3 | *\<Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)>*     |
+| IoT-Temperature        |  Team 2 | *\<Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)>* |
+| Grafana                |  Team 2 | *\<Siyabonga Luvuno Jele, Jenny Gia-Linh Huynh, Name3, Name4>*                                                                                                          |
+| GPS-Flutter-App        |  Team 1 | *Athi Yonela Mngqundaniso, Nicolai Gerster*                                                                                                                             |
+| GPS-Map / Mocking-Data |  Team 1 | *Jan Schneider, Nicolai Gerster*                                                                                                                                        |
+| Box Prototyp           |  Team 2 / Team 3 | *\<Alexander Schobloch, Julia Hosch, Jenny Gia-Linh Huynh, Siyabonga Jele>*                                                                                             |
 
 # Systemarchitecture
 Picture  
@@ -67,9 +67,13 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 * *\<Artifacts: fotos of Box>* [Box](./images/SmartContainer_Box.jpeg) 
 
 ## Module GPS
-* *\<Target/Requirement>* 
-* *\<Interfaces: link to GET's + POST + examples of JSON>*
-* *\<Concepts: Flutter App, Map>*
+* *Target/Requirement:* Tracking the boats, trucks, and the product (fish) to ensure that it stays in the supply chain, is on the right track and all participants are complying with laws. That can be harmed by fishing in forbidden zones.
+* *Interfaces:* Link to GET's ([Line 8](tracking/map/map.py)) + POST ([Line 67](tracking/mock_data.py)) + examples of JSON
+(`{"longi": 10.009358339673302, "lati": 48.38061466653206, "TimeStamp": 2024-06-27 19:50:00, "targetOBJ": "truck", "gpsOrigin": "real"}`)
+* *Concepts:* 
+  * *Flutter-App:* 
+  * *Map*: 
+* Flutter App, Map>*
 * *\<Artifacts: link to Flutter-Project>*
 * *\<Artifacts: link to py..>*
 * *\<Artifacts: screenShots of..>*

@@ -5,7 +5,7 @@ import folium
 from folium.plugins import MarkerCluster
 
 
-def database_respone_to_dataframe():
+def database_response_to_dataframe():
     host = 'apex.oracle.com'
     endpoint = '/pls/apex/hackathonjune2024/NilePProject/GpsData'  
     
@@ -27,7 +27,7 @@ def database_respone_to_dataframe():
         print(f"Error on establishing connection to database: {e}")
 
 
-df = database_respone_to_dataframe()
+df = database_response_to_dataframe()
 
 
 def create_line_color(param: str):
