@@ -5,20 +5,15 @@ import time
 from datetime import datetime
 import uuid
 
-
-
 # timestamp_interval = 900 # 5 minutes in seconds
 
 
-"https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA?identFish=1&fishID=1&fishWeight=3000g&fishSize=medium&LocalExport=0"
 fishID = 2
 fishWeight = 1000
 fishSize = "small-medium"
 LocalExport = 0
 
-
-
-#encoded_iDent = quote(iDent)
+# encoded_iDent = quote(iDent)
 encoded_fishId = quote(str(fishID))
 encoded_temp = quote(str(fishWeight))
 encoded_inRange = quote(fishSize)
@@ -36,7 +31,3 @@ if res.status == 200:
     print("Connection successful!")
 else:
     print(f"Connection failed. Status code: {res.status}")
-
-
-
-
