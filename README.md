@@ -76,7 +76,7 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
-* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard), [Temperature](//jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard) 
+* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/public-dashboards), [Temperature](//jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard) 
 * *\<Concepts: which Platform>*
 * *\<Artifacts: screenShots Grafana>*
 
