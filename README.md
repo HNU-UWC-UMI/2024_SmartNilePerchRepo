@@ -68,18 +68,25 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 
 ## Module GPS
 * *Target/Requirement:* Tracking the boats, trucks, and the product (fish) to ensure that it stays in the supply chain, is on the right track and all participants are complying with laws. That can be harmed by fishing in forbidden zones.
-* *Interfaces:* Link to GET's ([Line 8](tracking/map/map.py)) + POST ([Line 67](tracking/mock_data.py)) + examples of JSON
-(`{"longi": 10.009358339673302, "lati": 48.38061466653206, "TimeStamp": 2024-06-27 19:50:00, "targetOBJ": "truck", "gpsOrigin": "real"}`)
+* *Interfaces:* Link to GET's ([Line 8](tracking/map/map.py)) + POST ([Line 67](tracking/mock_data.py), [Line 93](tracking/flutter_files/flutter_lib/main.dart)) + examples of JSON (for mocking data and gps data from the flutter-app):
+```
+{"longi": 10.009358339673302, 
+"lati": 48.38061466653206, 
+"TimeStamp": 2024-06-27 19:50:00, 
+"targetOBJ": "truck", 
+"gpsOrigin": "real"}
+* ```
 * *Concepts:* 
-  * *Flutter-App:* 
-  * *Map*: It's python code that works in conjuction with the folium library. Folium is a python implementation of the leaflet javascript package. Folium uses the OpenStreetMap as a base and you can add things like lines and markes to it with arbritary coordinates (latitude and longitude).
-* Flutter App, Map>*
-* *\<Artifacts: link to Flutter-Project>*
-* *Artifacts: link to a working [jupyter notebook](./tracking/map/geo_map.ipynb). It also contains many information on how code works. It also includes examples and extras not implemented in the python file mentioned below.*
-* *Artifacts: link to a working [py](./tracking/map/map.py)*
-* *Artifacts: link to a working [map.html](./tracking/map/map.html). Downloading and opening this html file shows what you can expect from the python code.*
+  * *Flutter-App:* Because the Raspberry Pi did not work with the gps-sensor correctly, we have created a flutter-app to get the coordinates of a mobile phone. These coordinates were gathered with a button ("Start Tracking") from the built-in gps-sensor of the phone and were afterward pushed into the database as a post-request. By pressing the button ("Stop Tracking"), the flutter app and data traffic is paused until it is started again.
+    * We have written a [README](tracking/flutter_files/README.md) file for the setup of this flutter project. The flutter files can be found [here](tracking/flutter_files).
+  * *Map*: It's python code that works in conjunction with the folium library. Folium is a python implementation of the leaflet javascript package. Folium uses the OpenStreetMap as a base, and you can add things like lines and markes to it with arbitrary coordinates (latitude and longitude).
+* *Artifacts:* Link to [Flutter-Project / files](tracking/flutter_files)
+* *Artifacts:* Link to [mock_data.py](./tracking/mock_data.py). It takes coordinates and a target object (boat, truck, plane, phone) to first call an API for routing on land and for a direct connection between the destinations of boats and planes. After the points were created, they are posted into the database.
+* *Artifacts:* link to a working [jupyter notebook](./tracking/map/geo_map.ipynb). It also contains much information on what how code works. It also includes examples and extras not implemented in the python file mentioned below.
+* *Artifacts:* link to a working [map.py](./tracking/map/map.py)
+* *Artifacts:* link to a working [map.html](./tracking/map/map.html). Downloading and opening this html file shows what you can expect from the python code.
 
-* *Artifacts: Screenshot of DB Request to use with plotting things on the map ![plot](./tracking/map/artefacts/artefact_db_request_to_df.png)*
+* *Artifacts:* Screenshot of DB Request to use with plotting things on the map ![plot](./tracking/map/artefacts/artefact_db_request_to_df.png)
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
@@ -103,12 +110,12 @@ We connected the temperature sensor to the GPIO 4 Pin, the infrared sensor to th
 
 # Planning
 
-| Group         | Mon        | Tue      | Wed   | Thu  | Fri  |
-|--------------|----------------|-------------------|-------------|------------|---------|
-| 1 | Week planning | Setting up devices, Creating mocking data, DB architecture  | Creating map, Further create mocking data | Getting sensor data from device, Settling on API for DB to map, Connecting to DB | Implementing real sensor data on map, Last minute fixes, Presentation |
-| 2 |  Week planning, Issues | Data Base, work with Raspberry Pie   | Connecting with the other Groups, Integration, Testing, Dokumentation, Grafan  | Grafana, Data base, work with group 3 | Presentation |
-| 3 | General planning/identifting/defining tools to use/understanding the integration of the the use case | looking at the raspeberry and the different sensors to use that will be applicable for counting and measuring the fish/created a simulation environment to use the scale to define weight of the fish. The simualation code worked but we change the plan to use a infared sensor | Integrating count system with temperature system | Database implemention and connection| Building the system and presentation |
-| 4 |  General Planning procedures / increment for group and the whole project | Prepraring a Prototyp for the UI using MIRO / Deciding on a DBMS + First Considerations about InfluxDB / Firebase and finally Oracle Apex + Establishing first ER & ERR_Models| Getting started on Oracle Apex / Table Creation / REST-API | Integrating the other Groups in the DB / Refining Processes / Integrating the general Form for the Insepctor / Creation of UI-Interface using Oracle Apex| Final Refinements before the Presentation (Integration of the optimized Inspector_Report + Preparation Process for the Final_Presentation |
+| Group         | Mon                                                                                                  | Tue                                                                                                                                                                                                                                                                               | Wed                                                                           | Thu                                                                                                                                                       | Fri                                                                                                                                         |
+|---------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| 1             | Week planning                                                                                        | Setting up devices, Creating mocking data, DB architecture                                                                                                                                                                                                                        | Creating map, Further create mocking data                                     | Getting sensor data from device, Settling on API for DB to map, Connecting to  DB                                                                         | Implementing real sensor data on map, Last minute fixes, Presentation                                                                       |
+| 2             | Week planning, Issues                                                                                | Data Base, work with Raspberry Pie                                                                                                                                                                                                                                                | Connecting with the other Groups, Integration, Testing, Dokumentation, Grafan | Grafana, Data base, work with group 3                                                                                                                     | Presentation                                                                                                                                |
+| 3             | General planning/identifting/defining tools to use/understanding the integration of the the use case | looking at the raspeberry and the different sensors to use that will be applicable for counting and measuring the fish/created a simulation environment to use the scale to define weight of the fish. The simualation code worked but we change the plan to use a infared sensor | Integrating count system with temperature system                              | Database implemention and connection                                                                                                                      | Building the system and presentation                                                                                                        |
+| 4             | General Planning procedures / increment for group and the whole project                              | Prepraring a Prototyp for the UI using MIRO / Deciding on a DBMS + First Considerations about InfluxDB / Firebase and finally Oracle Apex + Establishing first ER & ERR_Models                                                                                                    | Getting started on Oracle Apex / Table Creation / REST-API                    | Integrating the other Groups in the DB / Refining Processes / Integrating the general Form for the Insepctor / Creation of UI-Interface using Oracle Apex | Final Refinements before the Presentation (Integration of the optimized Inspector_Report + Preparation Process for the Final_Presentation   |
 
 
 
