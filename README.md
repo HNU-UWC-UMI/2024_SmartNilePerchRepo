@@ -61,7 +61,7 @@ Interfaces
 * *\<Artifacts: fotos of Box>* [Box](./images/SmartContainer_Box.jpeg) 
 
 ## Module GPS
-* *\<Target/Requirement>*
+* *\<Target/Requirement>* 
 * *\<Interfaces: link to GET's + POST + examples of JSON>*
 * *\<Concepts: Flutter App, Map>*
 * *\<Artifacts: link to Flutter-Project>*
@@ -69,7 +69,7 @@ Interfaces
 * *\<Artifacts: screenShots of..>*
  
 ## Module Grafana
-* *\<Target/Requirement>*
+* *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dishboard
 * *\<Interfaces: links to GET>*
 * *\<Concepts: which Platform>*
 * *\<Artifacts: screenShots Grafana>*
