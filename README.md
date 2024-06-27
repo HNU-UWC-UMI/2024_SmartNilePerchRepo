@@ -70,7 +70,7 @@ Interfaces
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
-* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard?orgId=1&refresh=5s&from=1719485336104&to=1719506936104), [Temperature](//jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard?orgId=1&from=1719485392415&to=1719506992415) 
+* *\<Interfaces: links to GET>* [Fish counter]([//jelesiya.grafana.net/public-dashboards/778e57ee95d64530a92b68a6f1f6f9c2)), [Temperature](//jelesiya.grafana.net/public-dashboards/8d5dca2de95240ccaba8c462f746f3d4) 
 *  
 * *\<Concepts: which Platform>*
 * *\<Artifacts: screenShots Grafana>*
