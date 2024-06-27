@@ -57,8 +57,8 @@ Interfaces
 * *\<Target/Requirement>*
 * *\<Interfaces: links to POST>*
 * *\<Concepts: Description of Logic + used Hardware>*
-* *\<Artifacts: links to py-Code>*
-* *\<Artifacts: fotos of Box>* [link](./images/SmartContainer_Box.jpeg) 
+* *\<Artifacts: links to py-Code>* [Counter](./raspberry/Counter.py) * [DB_Creation](./raspberry/creating_db_fish_size.py) * [Temp](./raspberry/Temp.py)
+* *\<Artifacts: fotos of Box>* [Box](./images/SmartContainer_Box.jpeg) 
 
 ## Module GPS
 * *\<Target/Requirement>*
