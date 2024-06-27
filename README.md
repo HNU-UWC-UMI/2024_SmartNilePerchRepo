@@ -57,7 +57,7 @@ Interfaces
 * *\<Interfaces: links to POST>*
 * *\<Concepts: Description of Logic + used Hardware>*
 * *\<Artifacts: links to py-Code>*
-* *\<Artifacts: fotos of Box>*
+* *\<Artifacts: fotos of Box>* [link](./images/SmartContainer_Box.jpeg) 
 
 ## Module GPS
 * *\<Target/Requirement>*
