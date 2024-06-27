@@ -70,8 +70,7 @@ Interfaces
  
 ## Module Grafana
 * *\<Target/Requirement>* Displaying temperature and fish counter in real-time on a dashboard
-* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/public-dashboards/778e57ee95d64530a92b68a6f1f6f9c2), [Temperature](//jelesiya.grafana.net/public-dashboards/8d5dca2de95240ccaba8c462f746f3d4) 
-*  
+* *\<Interfaces: links to GET>* [Fish counter](//jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard), [Temperature](//jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard) 
 * *\<Concepts: which Platform>*
 * *\<Artifacts: screenShots Grafana>*
 
@@ -85,8 +84,8 @@ Interfaces
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *description* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *gps* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *inspector-form* | 
-| *https://jelesiya.grafana.net/d/edondbv483zswc/temperature-dashboard?orgId=1&refresh=5s&from=1718266788853&to=1718288388854* | *Dashboard temperature* |
-| *https://jelesiya.grafana.net/d/cdonvamsva9z4a/fishcounter-dashboard?orgId=1&refresh=5s&editIndex=0&from=1718267023970&to=1718288623970* | *Dashboard fishcounter* |
+| *https://jelesiya.grafana.net/public-dashboards/8d5dca2de95240ccaba8c462f746f3d4* | *Dashboard temperature* |
+| *https://jelesiya.grafana.net/public-dashboards/778e57ee95d64530a92b68a6f1f6f9c2* | *Dashboard fishcounter* |
 
 
 # Planning
