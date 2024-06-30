@@ -50,16 +50,20 @@ Interfaces
 *\<Short Description of interfaces>*
 
 ## Module Apex-Backend: DB-Model
+
 * *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
 * *\<Interfaces: links to GET + POST + examples of JSON>*
 
-| Links to Get & Post     | Topic         | 
-|------------------------|-----------------|
-| https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA | *Temperature* | 
-| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *FishCounter* | 
-| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *FishDescription* | 
-| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *GPS* | 
-| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *InspectorForm* | 
+| Links to Get & Post     | Topic         | JSON-Examples    |
+|------------------------|-----------------|-----------------|
+| https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA | *Temperature* | *{"tempId": 2, "temp": -2.3, "inRange": 0, "timeStamps": "2024-06-12 09:43:32"}* |
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *FishCounter* | *{"fishCounterId":22, "containerId": 22, "fishCounterSize": 6000}* |
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *FishDescription* | *{"fishID": 1, "fishWeight": "3000g", "fishSize": "large", "LocalExport": "O 1" }* |
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *GPS* | *{"gpsId": 1,"longi":84.37608,"lati":-26.29409,"TimeStamp":"2024-06-12 09:43:32","targetOBJ":"BOAT","gpsOrigin":"real"}* |
+| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *InspectorForm* | ** |
+
+
+
 
 * *\<Concepts: ER-Diagramm>*
 * *\<Artifacts: link to ddl>*
