@@ -50,6 +50,9 @@ Interfaces
 *\<Short Description of interfaces>*
 
 ## Module Apex-Backend: DB-Model
+* *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
+* *\<Interfaces: links to GET + POST + examples of JSON>*
+
 | Links to Get & Post     | Topic         | 
 |------------------------|-----------------|
 | https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA | *Temperature* | 
@@ -58,9 +61,6 @@ Interfaces
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *GPS* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *InspectorForm* | 
 
-
-* *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
-* *\<Interfaces: links to GET + POST + examples of JSON>*
 * *\<Concepts: ER-Diagramm>*
 * *\<Artifacts: link to ddl>*
 * *\<Artifacts: screenShots of Apex-Forms>*
