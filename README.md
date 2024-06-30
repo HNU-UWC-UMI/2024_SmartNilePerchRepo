@@ -52,8 +52,9 @@ Interfaces
 ## Module Apex-Backend: DB-Model
 * *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
 * *\<Interfaces: links to GET + POST + examples of JSON>*
-  
-| *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *Temperature* | 
+| Links to Get & Post     | Topic         | 
+|------------------------|-----------------|
+| https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA | *Temperature* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *FishCounter* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *FishDescription* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/GpsData* | *GPS* | 
