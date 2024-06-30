@@ -51,7 +51,8 @@ Interfaces
 
 ## Module Apex-Backend: DB-Model
 * *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
-* *\<Interfaces: links to GET + POST + examples of JSON>* *
+* *\<Interfaces: links to GET + POST + examples of JSON>*
+  
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/TEMPERATURE_DATA* | *Temperature* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHCOUNTER_DATA* | *FishCounter* | 
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/FISHDESC_DATA* | *FishDescription* | 
@@ -60,7 +61,7 @@ Interfaces
 * *\<Concepts: ER-Diagramm>*
 * *\<Artifacts: link to ddl>*
 * *\<Artifacts: screenShots of Apex-Forms>*
-* *\<Access to Apex: link / workspace / user / pwd >*
+* *\<Access to Apex: link / workspace / user / pwd >* LINK: https://apex.oracle.com/pls/apex/f?p=4550:1:4236082934922::::: / WORKSPACE: hackathonjune2024 / USER: MORITZ.GRUBER_1@STUDENT.HNU.DE / PWD: D81mwdH-18
 
 
 ## Module IoT-Counter+Temp (both Teams together)
