@@ -63,9 +63,9 @@ Interfaces
 | *https://apex.oracle.com/pls/apex/hackathonjune2024/NilePProject/INSPECTORREPORT_DATA* | *InspectorForm* | ** |
 
 * *\<Concepts: ER-Diagramm>*
+
 ![HackathonJune2024 ER-CHEN (1)](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/a141721d-385c-4e2c-b18b-a5b4e4bdb94a)
 
-  
 * *\<Artifacts: link to ddl>*
 * *\<Artifacts: screenShots of Apex-Forms>*
 * *\<Access to Apex: link / workspace / user / pwd >* LINK: https://apex.oracle.com/pls/apex/f?p=4550:1:4236082934922::::: / WORKSPACE: hackathonjune2024 / USER: MORITZ.GRUBER_1@STUDENT.HNU.DE / PWD: D81mwdH-18
