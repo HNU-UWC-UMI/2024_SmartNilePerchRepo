@@ -68,8 +68,8 @@ Interfaces
 
 * *\<Artifacts: link to ddl>*
 
-| DDL    | Topic         | TABLE   |
-|------------------------|-----------------|-----------------|
+| DDL    | TABLE   |
+|------------------------|-----------------|
 | ** | *![TEMP_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/c1d60f16-2f31-4e83-abee-af06a22ee86b)* |
 | ** | *![FISHCOUNTER_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/3f915bed-a2c6-4f28-991c-b76148c0502b)* |
 | ** | *![FISHDESC_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/5495b5f0-b414-4e3b-a195-2e137602412f)* |
