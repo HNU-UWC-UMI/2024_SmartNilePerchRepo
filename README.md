@@ -70,11 +70,11 @@ Interfaces
 
 | DDL    | TABLE   |
 |------------------------|-----------------|
-| ** | *![TEMP_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/c1d60f16-2f31-4e83-abee-af06a22ee86b)* |
+| *https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/4d26d87983f53ac68e6ff0b09a06fc4eb07b12d4/ORACLE%20APEX%20DB%20SQL_COMMANDS#L44-L54* | *![TEMP_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/c1d60f16-2f31-4e83-abee-af06a22ee86b)* |
 | *https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/4d26d87983f53ac68e6ff0b09a06fc4eb07b12d4/ORACLE%20APEX%20DB%20SQL_COMMANDS#L4-L13* | *![FISHCOUNTER_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/3f915bed-a2c6-4f28-991c-b76148c0502b)* |
-| ** | *![FISHDESC_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/5495b5f0-b414-4e3b-a195-2e137602412f)* |
-| ** | *![GPS_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/86cb30c4-cca2-450b-91b3-b9a6dd337686)*  |
-| ** | *![INSPECTOR_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/90e6f2b3-4126-4a29-bc91-ef4c4ee2c645)* |
+| *https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/4d26d87983f53ac68e6ff0b09a06fc4eb07b12d4/ORACLE%20APEX%20DB%20SQL_COMMANDS#L16-L26* | *![FISHDESC_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/5495b5f0-b414-4e3b-a195-2e137602412f)* |
+| *https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/4d26d87983f53ac68e6ff0b09a06fc4eb07b12d4/ORACLE%20APEX%20DB%20SQL_COMMANDS#L29-L41* | *![GPS_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/86cb30c4-cca2-450b-91b3-b9a6dd337686)*  |
+| *https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/4d26d87983f53ac68e6ff0b09a06fc4eb07b12d4/ORACLE%20APEX%20DB%20SQL_COMMANDS#L57-L70* | *![INSPECTOR_TABLE](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/90e6f2b3-4126-4a29-bc91-ef4c4ee2c645)* |
 
 * *\<Artifacts: screenShots of Apex-Forms>*
 * *\<Access to Apex: link / workspace / user / pwd >* LINK: https://apex.oracle.com/pls/apex/f?p=4550:1:4236082934922::::: / WORKSPACE: hackathonjune2024 / USER: MORITZ.GRUBER_1@STUDENT.HNU.DE / PWD: D81mwdH-18
