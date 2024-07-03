@@ -25,7 +25,7 @@ Link to user stories: [User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerc
 | Sub-Project/Modul      | Team            | Names + Responsibility                                                                                                                                                |  
 |------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *\<Example Modul>*     | Team A          | Micky Mouse (py-Code), Donald Duck (doc), Gustav Gans (test)                                                                                                          |
-| Apex-DB                | Team 4          | *\<Name1, Name2, Name3, Moritz.Gruber (DBAdministration, RESTful-Provider)>*                                                                                          |
+| Apex-DB                | Team 4          | *Moritz.Gruber (DBAdministration, RESTful-Provider)*                                                                                          |
 | Apex-Forms             | Team 4          | *\<Name1, Name2, Name3, Name4>*                                                                                                                                       |
 | IoT-Counter            | Team 3          | *Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test, doc), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)* |
 | IoT-Temperature        | Team 2          | *Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)*  |
@@ -51,7 +51,7 @@ Interfaces
 
 ## Module Apex-Backend: DB-Model
 
-* *\<Target/Requirement>*The main target was the storage of the data gathered by each group according to their requirements. As well as providing RESTful-Services in order to allow the according data input and offer the option to "GET" the stored data packages for visualization purposes. 
+* *\<Target/Requirement>*The main target was the storage of the data gathered by each groupin a cloud based Database in accordance with their requirements. As well as providing RESTful-Services in order to allow the accurate data input and offer the option to "GET" the stored data packages for visualization purposes. 
 * *\<Interfaces: links to GET + POST + examples of JSON>*
 
 | Links to Get & Post     | Topic         | JSON-Examples    |
