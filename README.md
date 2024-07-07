@@ -28,7 +28,7 @@ Link to user stories: [User stories](//github.com/HNU-UWC-UMI/2024_SmartNilePerc
 | Apex-DB                | Team 4          | *Moritz.Gruber (DBAdministration, RESTful-Provider)*                                                                                          |
 | Apex-Forms             | Team 4          | *\<Name1, Name2, Name3, Name4>*                                                                                                                                       |
 | IoT-Counter            | Team 3          | *Alexander Schobloch (py-Code, doc), Julia Hosch (py-Code, test, doc), Yusuf Gitta (Requirements, Presentation), Nomonde Bridgette Zama (Requirements, Presentation)* |
-| IoT-Temperature        | Team 2          | *Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)*  |
+| IoT-Temperature        | Team 2          | *Jenny Gia-Linh Huynh (py-code, grafana, Apex-DB), Isabell Riffel(github documentation, Powerpoint), Siyabonga Luvuno Jele(py-code, grafana)=, Isaac Senda(presentation slides)*  |
 | Grafana                | Team 2          | *Siyabonga Luvuno Jele, Jenny Gia-Linh Huynh, Name3, Name4>*                                                                                                          |
 | GPS-Flutter-App        | Team 1          | *Athi Yonela Mngqundaniso, Nicolai Gerster*                                                                                                                           |
 | GPS-Map / Mocking-Data | Team 1          | *Jan Schneider, Nicolai Gerster*                                                                                                                                      |
@@ -65,6 +65,8 @@ Interfaces
 * *\<Concepts: ER-Diagramm>*
 
 ![HackathonJune2024 ER-CHEN (1)](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/a141721d-385c-4e2c-b18b-a5b4e4bdb94a)
+
+![Architektur](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/develop/Bildschirmfoto%202024-07-07%20um%2016.53.40.png)
 
 * *\<Artifacts: link to ddl>*
 
