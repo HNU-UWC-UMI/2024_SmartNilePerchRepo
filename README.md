@@ -66,7 +66,7 @@ Interfaces
 
 ![HackathonJune2024 ER-CHEN (1)](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/assets/167418377/a141721d-385c-4e2c-b18b-a5b4e4bdb94a)
 
-![Architektur](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/develop/Architecture.png)
+![Architektur](https://github.com/HNU-UWC-UMI/2024_SmartNilePerchRepo/blob/develop/doc/Bildschirmfoto%202024-07-07%20um%2017.02.15.png)
 
 * *\<Artifacts: link to ddl>*
 
